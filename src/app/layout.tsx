@@ -5,13 +5,25 @@ import "./globals.css"
 const geist = Geist({ subsets: ["latin"], variable: "--font-geist" })
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://bunksafe.app"),
+  metadataBase: new URL("https://bunksafe-nu.vercel.app"),
+
+  verification: {
+    google: "UvX8XO6cymcW6hJqICb6q6Ktl5xiRWEviK_VihlmmlQ",
+  },
+
+  robots: {
+  index: true,
+  follow: true,
+},
+
   title: {
     default: "Attendance Calculator & Bunk Planner | BunkSafe",
     template: "%s | BunkSafe",
   },
+
   description:
     "Free attendance calculator to calculate attendance percentage, track bunk limits, and know how many classes you can miss.",
+
   keywords: [
     "attendance calculator",
     "75 attendance calculator",
@@ -22,17 +34,20 @@ export const metadata: Metadata = {
     "classes needed for 75 attendance",
     "college attendance tracker",
   ],
+
   alternates: {
     canonical: "/",
   },
+
   openGraph: {
     title: "Attendance Calculator & Bunk Planner | BunkSafe",
     description:
       "Calculate attendance percentage, track bunk limits, and know exactly how many classes you can miss.",
     type: "website",
-    url: "/",
+    url: "https://bunksafe-nu.vercel.app",
     siteName: "BunkSafe",
   },
+
   twitter: {
     card: "summary_large_image",
     title: "Attendance Calculator & Bunk Planner | BunkSafe",
