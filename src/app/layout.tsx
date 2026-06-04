@@ -1,9 +1,12 @@
 import type { Metadata } from "next"
-import { GoogleAnalytics } from '@next/third-parties/google'
+import { GoogleAnalytics } from "@next/third-parties/google"
 import { Geist } from "next/font/google"
 import "./globals.css"
 
-const geist = Geist({ subsets: ["latin"], variable: "--font-geist" })
+const geist = Geist({
+  subsets: ["latin"],
+  variable: "--font-geist",
+})
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://bunksafe-nu.vercel.app"),
@@ -13,9 +16,9 @@ export const metadata: Metadata = {
   },
 
   robots: {
-  index: true,
-  follow: true,
-},
+    index: true,
+    follow: true,
+  },
 
   title: {
     default: "Attendance Calculator & Bunk Planner | BunkSafe",
@@ -57,10 +60,19 @@ export const metadata: Metadata = {
   },
 }
 
-export default function RootLayout({ children }: { children: React.ReactNode }) {
+export default function RootLayout({
+  children,
+}: {
+  children: React.ReactNode
+}) {
   return (
     <html lang="en" className={geist.variable}>
-      <body className="min-h-screen flex flex-col font-sans">{children}</body>
+      <body className="min-h-screen flex flex-col font-sans">
+        {children}
+      </body>
+
+      {/* Replace with your Google Analytics Measurement ID */}
+      <GoogleAnalytics gaId="G-5NY5TQD6V0" />
     </html>
   )
 }
