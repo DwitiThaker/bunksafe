@@ -1,4 +1,5 @@
 import type { Metadata } from "next"
+import { GoogleAnalytics } from '@next/third-parties/google'
 import { Geist } from "next/font/google"
 import "./globals.css"
 
